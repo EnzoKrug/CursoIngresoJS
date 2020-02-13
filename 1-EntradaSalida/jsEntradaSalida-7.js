@@ -47,7 +47,7 @@ function multiplicar()
 
     numeroUno= parseInt(numeroUno);
     numeroDos= parseInt(numeroDos);
-
+S
     resultado= (numeroUno * numeroDos);
     
     alert("Su multiplicación es: " + resultado);	
