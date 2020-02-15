@@ -2,10 +2,12 @@ function mostrar()
 {
 //Genero el número RANDOM entre 1 y 10 
 
-	var numero;
+	var numeroAleatorio;
 
-	Math.floor(Math.random()*(11-1)+1);
+	numeroAleatorio=Math.floor(Math.random()*11 - 1)+1;
+	
+	numeroAleatorio=parseInt(numeroAleatorio);
 
-	alert(numero);
+	alert(numeroAleatorio);
 
 }//FIN DE LA FUNCIÓN
