@@ -6,8 +6,7 @@ function mostrar()
 	var numMin;
 	var continuar;
 	// declarar variables
-	
-	var respuesta='si';
+
 	do{
 		numero=parseInt(prompt("Ingresar numero:"));
 		if(contador == 0)

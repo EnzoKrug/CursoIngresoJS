@@ -25,7 +25,7 @@ function mostrar()
         case "neptuno":
         case "plutón":
         {
-            alert("Acá hace mas calor");
+            alert("Acá hace mas frío");
             break;
         }
         default:

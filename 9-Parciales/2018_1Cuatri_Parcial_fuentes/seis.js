@@ -13,7 +13,7 @@ function mostrar()
         case 10:
         case 11:
         
-            alert("Es de maÃ±ana")
+            alert("Es de mañana")
             break;
         
         case 12:
@@ -48,7 +48,7 @@ function mostrar()
             {
                 alert("Es de noche");
             }
-        
+            break;
         default:
         {
             alert("No es una hora valida");
