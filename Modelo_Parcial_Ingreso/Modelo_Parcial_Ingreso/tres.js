@@ -11,9 +11,45 @@ f) La temperatura máxima ingresada, y nombre del pais que registro esa temperat
 */
 function mostrar()
 {
+    //1-Declaro variables.
     var pais;
     var cantHabitantes;
     var temperaturaMin;
+    var respuesta;
 
-    
+    //2-Inicializo las variables y las valido.
+    do {
+        
+        pais=prompt("Ingrese el nombre de un país:");
+        cantHabitantes=prompt("Ingrese la cantidad de habitantes, en millones, de ese país (entre 1 y 270):");
+        cantHabitantes=parseInt(cantHabitantes);
+        while(cantHabitantes<1 && cantHabitantes>270)
+        {
+            cantHabitantes=prompt("ERROR. reingrege la cantidad de habitantes en millones (entre 1 y 270):");
+            cantHabitantes=parseInt(cantHabitantes);
+        }
+        temperaturaMin=prompt("Ingrese la temperatura mínima que se registra en el territorio de ese país (entre -50 y 50):");
+        temperaturaMin=parseInt(temperaturaMin);
+        while(temperaturaMin<-50 && temperaturaMin>50)
+        {
+            temperaturaMin=prompt("ERROR. Reingrese la temperatura mínima que se registra en ese territorio (entre -50 y 50):");
+            temperaturaMin=parseInt(temperaturaMin);
+        }
+        if(temperaturaMin)
+        {
+
+        }
+
+
+    } while (respuesta);
+
+    //3-Proceso de datos.
+
+
+
+
+    //4-Muestro los resultados.
+
+
+
 }

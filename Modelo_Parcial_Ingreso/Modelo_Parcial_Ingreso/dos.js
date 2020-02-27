@@ -1,17 +1,14 @@
 function mostrar()
 {
 //Declaro variables
-    var contador=0;
     var nombre;
     var genero;
     var edad;
     var peso;
-    var acumulador=0;
     var acumGenero;
     var acumEdad=0;
     var acumPeso=0;
     var cantEdadMayor25=0;
-    var cantPersPesoM80=0;
     var personaMenosPesada;
     var pesoMinimo;
     var promedioEdad=0;
