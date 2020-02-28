@@ -1,35 +1,55 @@
 
 function mostrar()
 {
-    var ladoA=0;
-    var ladoB=0;
-    var angRectos="Sí";
+    // 1) Declaro variables;
+    var ladoA;
+    var ladoB;
+    var tieneAngulosRectos; 
+    var mensaje;
 
-    ladoA=document.getElementById("ladoA").value;
-    ladoB=document.getElementById("ladoB").value;
-    ladoA=parseInt(ladoA);
-    ladoB=parseInt(ladoB);
+    // 2) Inicializo las variables y valido;
+    ladoA = document.getElementById("ladoA").value;
+    ladoA = parseInt(ladoA);
+    
+    while(isNaN(ladoA) || ladoA < 0) {
+        ladoA = prompt("Error. Ingrese un nùmero positivo para el lado A:");
+        ladoA = parseInt(ladoA);
+    }
+    
+    ladoB = document.getElementById("ladoB").value;
+    ladoB = parseInt(ladoB);
 
-    document.getElementById("angulosRectos").value=angRectos;
+    while(isNaN(ladoB) || ladoB < 0) {
+		ladoB = prompt("Error. Ingrese un nùmero positivo para el lado B:");
+        ladoB = parseInt(ladoB);
+    }
 
-    if(ladoA!=ladoB && angRectos=="No")
-        {
-            alert("Lado A: " + ladoA + ", Lado B: "+ ladoB+" " +"Lados concatenados: " + ladoA+""+ladoB + " La superficie es: " + ladoA*ladoB);
+    tieneAngulosRectos = document.getElementById("angulosRectos").value;
+   
+    mensaje = "Lados concatenados: " + ladoA + ladoB + ".";
+
+    // 3) Proceso los datos
+    if (tieneAngulosRectos == "SI") {
+        if(ladoA === ladoB) {
+            var multiplicacion = ladoA * ladoB;
+            mensaje += " Es un cuadrado y sus lados multiplicados dan " + multiplicacion + ".";
         }
-    else
-    {
-        if (ladoA!=ladoB && angRectos=="Sí")
-        {
-            alert("Lado A: " + ladoA + ", Lado B: "+ ladoB+" "+"Lados concatenados: " + ladoA+""+ladoB+ " El perimetro: "+ (ladoA*2)+(ladoB*2));
+        else {
+            var superficie = ladoA * ladoB;
+            mensaje += " Es un rectángulo con una superficie de " + superficie + ".";
         }
-        if(ladoA=ladoB && angRectos=="Sí")
-            {
-                alert("Lado A: " + ladoA + ", Lado B: "+ ladoB+" "+"Lados concatenados: " + ladoA+""+ladoB+ " La multiplicaión de los lados es: "+ (ladoA)*(ladoB));
-            }
-        else if(ladoA=ladoB && angRectos=="No")
-            {
-                alert("Lado A: " + ladoA + ", Lado B: "+ ladoB+" "+"Lados concatenados: " + ladoA+""+ladoB+ "  La suma de sus lados es: "+ladoA+ladoB);
-            }
-    }  
+    } 
+    else {
+        if(ladoA === ladoB) {
+            var suma = ladoA + ladoB;
+            mensaje += " Es un rombo y la suma de los lados es " + suma + ".";    
+        }
+        else {
+            var perimetro = 2* (ladoA + ladoB);
+            mensaje += " Es un romboide con un perímetro de " + perimetro + ".";
+        }
+    }
+
+    //4) Muestro los resultados
+    alert(mensaje);
 }
-
